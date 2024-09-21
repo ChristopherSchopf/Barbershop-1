@@ -22,6 +22,10 @@ h1, h2 {
     height: 1080px;
 }
 
+.small-logo {
+    display: none;
+}
+
 .header-nav {
     background-color: #1E1A19;
     color: white;
@@ -81,6 +85,7 @@ h1, h2 {
 }
 
 .responsive img {
+    max-width: 600px;
     width: 100%;
     height: auto;
 }
@@ -170,10 +175,18 @@ h1, h2 {
         text-align: center;
     }
 
+    .small-logo {
+        display: block;
+    }
+    .small-logo img {
+        width: 100%;
+        height: auto;
+    }
 
     /* Display the hamburger icon */
     .hamburger {
         display: flex; /* Make the hamburger icon visible */
+        float: right;
     }
 
     /* Show the nav items when the hamburger is clicked */
@@ -187,5 +200,12 @@ h1, h2 {
     }
     .header-nav img {
         display: none;
+    }
+    .header-nav li {
+        padding-bottom: .5rem;
+    }
+    .mobile-header {
+        display: flex;
+        align-items: center;
     }
 }
