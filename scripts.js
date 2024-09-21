@@ -12,3 +12,8 @@ window.addEventListener('scroll', function() {
         logoLi.style.display = 'block';
     }
 });
+
+document.getElementById('hamburger').addEventListener('click', function() {
+    const navMenu = document.querySelector('.header-nav ul');
+    navMenu.classList.toggle('show');
+});
