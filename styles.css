@@ -6,6 +6,7 @@
 }  /* Clear initial styles and set border box */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rock+Salt&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -17,6 +18,24 @@ h1, h2 {
     font-size: 2rem;
 }
 
+h3 {
+    font-family: "Poppins", system-ui;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+}
+
+address {
+    font-style: normal;
+    text-transform: uppercase;
+    padding: 0 0 1rem 0;
+}
+
+a[href^="tel"] {
+    text-decoration: none;
+    color: yellow;
+}
+
+
 .container {
     background-image: url('img/barber-splash-1.png');
     height: 1080px;
@@ -24,6 +43,7 @@ h1, h2 {
 
 .small-logo {
     display: none;
+    font-family: "Rock Salt", cursive;
 }
 
 .header-nav {
@@ -102,7 +122,7 @@ h1, h2 {
     padding: 1rem 22rem;
 }
 
-.crew-member img {
+.crew-member img, .inner-service-box img {
     width: 100%;
     height: auto;
     border-radius: 50%;
@@ -110,12 +130,15 @@ h1, h2 {
     filter: grayscale(0%);
 }
 
-.crew-member img:hover {
+.crew-member img:hover, .inner-service-box img:hover {
     -webkit-filter: grayscale(100%); /* Grayscale on hover */
     filter: grayscale(100%);
     cursor: pointer;
 }
 
+.inner-service-box img {
+    max-width: 400px;
+}
 
 .crew-member h3 {
     font-size: 1.5rem;
@@ -130,11 +153,50 @@ h1, h2 {
 }
 
 .footer {
-    height: 50px;
     color: white;
     background-color: #1E1A19;
     text-align: center;
+}
+
+.footer h2 {
+    padding-bottom: .25rem;
+
+}
+
+.footer p {
+    padding-bottom: 2rem;
+}
+
+.services {
+    padding: 1rem 22rem;
+    text-align: center;
+    color: rgb(58, 57, 57);
+    font-size: 1.5rem;
+}
+
+.services h2 {
+    color: #3A3939;
+}
+
+.service-box {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10rem;
+    align-items: center;
     padding: 1rem;
+}
+.inner-service-box {
+    flex-basis: 50%;
+}
+
+
+
+.services p {
+    padding: .5rem 0rem;
+}
+
+.mobile-heading {
+    display: none;
 }
 
 /* Media Queries */
@@ -144,6 +206,10 @@ h1, h2 {
         padding-right: 1rem;
     }
     .crew-member {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .services {
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -160,10 +226,22 @@ h1, h2 {
         flex-direction: column;
         gap: 2rem;
     }
+    .services {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .service-box {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
     /* Hide the main navigation links */
+    .header-nav {
+        padding: 0rem .625rem;
+    }
+
     .header-nav ul {
         display: none;
         flex-direction: column;
@@ -178,6 +256,7 @@ h1, h2 {
     .small-logo {
         display: block;
     }
+
     .small-logo img {
         width: 100%;
         height: auto;
@@ -186,7 +265,7 @@ h1, h2 {
     /* Display the hamburger icon */
     .hamburger {
         display: flex; /* Make the hamburger icon visible */
-        float: right;
+        
     }
 
     /* Show the nav items when the hamburger is clicked */
@@ -204,8 +283,22 @@ h1, h2 {
     .header-nav li {
         padding-bottom: .5rem;
     }
+    
     .mobile-header {
         display: flex;
         align-items: center;
+    }
+    .mobile-heading {
+        display: block;
+    }
+    .mobile-heading img {
+        width: 100%;
+        height: auto;
+    }
+    .about {
+        padding: 0px;
+    }
+    .container {
+        height: 2.5rem;
     }
 }
