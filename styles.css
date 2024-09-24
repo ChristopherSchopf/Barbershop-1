@@ -87,6 +87,10 @@ a[href^="tel"] {
     padding: 0rem .9375rem;
 }
 
+.header-nav a:hover {
+    color: yellow;
+}
+
 .about {
     text-align: center;
     padding: 1rem 18rem;
