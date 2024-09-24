@@ -17,3 +17,13 @@ document.getElementById('hamburger').addEventListener('click', function() {
     const navMenu = document.querySelector('.header-nav ul');
     navMenu.classList.toggle('show');
 });
+
+// Close the mobile navbar when a link is clicked
+const navLinks = document.querySelectorAll('.header-nav ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        const navMenu = document.querySelector('.header-nav ul');
+        navMenu.classList.remove('show'); // Hide the menu
+    });
+});
+
